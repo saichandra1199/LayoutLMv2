@@ -16,7 +16,7 @@
 
 ##### Data Preparation
 
-3. Prepare data from Prepare Folder 
+5. Prepare data from Prepare Folder 
     a. place images and annotations of layoutlmv1 in one folder 
     b. give required inputs in convertv1_v2_json.py ( above folder path and desired json file name )
         filepath = "./Prepare/Sample_Data/" 
@@ -32,30 +32,30 @@
 
 ##### Training 
 
-4. Add required inputs in train_json.py
+6. Add required inputs in train_json.py
     data_files= path to create json file
     pretrained_model = use previously trained .pt model or else keep it as ""
     model_to_save = desired trained model name ( ex: "layout_train.pt" )
     num_train_epochs = As per requirement ( default 100 )
     batch_size = As per requirement based on available data( default 16 ).
 
-5. run python3 train_json.py
+7. run python3 train_json.py
 
-6. After completion model will be saved in  Models/ folder and a text file will be saved in your data folder in Prepare/ this file has dictionary of ids and labelled mapped. This is used while testing to predict the correct label according to training labels.
+8. After completion model will be saved in  Models/ folder and a text file will be saved in your data folder in Prepare/ this file has dictionary of ids and labelled mapped. This is used while testing to predict the correct label according to training labels.
 
 
 ##### Model 
 	
-1. Download the pretrained model from the drive link below
+9. Download the pretrained model from the drive link below
 	https://drive.google.com/file/d/1z78obbtNrn-enWRscWehlltw4LY_o-gy/view?usp=sharing
 
 ##### Testing
 
-7. Add required inputs in Results/test.py
+10. Add required inputs in Results/test.py
     image_path = input images path 
     model_path = trained .pt model path
     txt_path = generated text file path after training for using the labels mapped with respective ids
     output_path = empty output folder path where output images and json will be saved.
     Change label colors as per your requirement in postprocess function.
 
-8. run python3 test.py
+11. run python3 test.py
