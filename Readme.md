@@ -1,4 +1,4 @@
-* LayoutLMv2 Setup
+# LayoutLMv2 Setup
 
 ## Environment Setup
 
