@@ -1,6 +1,6 @@
 * LayoutLMv2 Setup
 
-##### Environment Setup
+## Environment Setup
 
 1. Create new conda env with python==3.10.4
 
@@ -10,11 +10,11 @@
 3. Activate created conda environment before further process.
 
 4. Remove the existing detectron2 folder in the repository and run the following commands for installing detectron2
-    git clone https://github.com/facebookresearch/detectron2.git
+    git clone https://github.com/facebookresearch/detectron2.git and 
     python -m pip install -e detectron2
 
 
-##### Data Preparation
+## Data Preparation
 
 5. Prepare data from Prepare Folder 
     a. place images and annotations of layoutlmv1 in one folder 
@@ -30,7 +30,7 @@
    
    If you have multiple jsons each for an image and need to combine them for training then use json_combine.py
 
-##### Training 
+## Training 
 
 6. Add required inputs in train_json.py
     data_files= path to create json file
@@ -44,12 +44,13 @@
 8. After completion model will be saved in  Models/ folder and a text file will be saved in your data folder in Prepare/ this file has dictionary of ids and labelled mapped. This is used while testing to predict the correct label according to training labels.
 
 
-##### Model 
+## Model 
 	
-9. Download the pretrained model from the drive link below
+9. Download the pretrained model from the drive link below and add it in Models/ folder
+
 	https://drive.google.com/file/d/1z78obbtNrn-enWRscWehlltw4LY_o-gy/view?usp=sharing
 
-##### Testing
+## Testing
 
 10. Add required inputs in Results/test.py
     image_path = input images path 
